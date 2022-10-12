@@ -15,14 +15,19 @@ module.exports = {
 
 
     colors: {
+
+      'black' : '#000000',
+      'white' : '#ffffff',
+
       'gray-900': '#121214',
       'gray-800': '#202024',
       'gray-400': '#7c7c8a',
       'gray-200': '#c4c4cc',
       'gray-100': '#e1e1e6',
 
-      'orange-500': '#FD841F',
+      'orange-500': '#f66c0b',
       'orange-300': '#fd841f',
+      'orange-100': '#FBC199',
 
     },
 
