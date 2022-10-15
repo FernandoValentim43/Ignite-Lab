@@ -15,7 +15,7 @@ export function Heading({ size = 'md', children, asChild}: HeadingProps) {
 
 
   return (
-    <Comp className={clsx('text-gray-100 font-bold', {
+    <Comp className={clsx('text-gray-200 font-bold', {
         'text-lg' : size === 'sm',
         'text-xl' : size === 'md',
         'text-2xl' : size === 'lg',
