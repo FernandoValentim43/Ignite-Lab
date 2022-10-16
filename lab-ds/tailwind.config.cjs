@@ -29,6 +29,8 @@ module.exports = {
       'orange-300': '#fd841f',
       'orange-100': '#FBC199',
 
+      'transparent': 'transparent'
+
     },
 
     extend: {
