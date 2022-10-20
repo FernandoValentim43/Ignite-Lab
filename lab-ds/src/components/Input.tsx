@@ -8,7 +8,7 @@ export interface InputRootProps {
 
 function InputRoot(props: InputRootProps) {
 return (
-  <div className='h-10 flex items-center gap-3 py-4 px-3 rounded w-full  bg-gray-800 focus-within:ring-1 ring-orange-500'>
+  <div className='h-10 flex items-center gap-3 px-3 rounded w-full  bg-gray-800 focus-within:ring-1 ring-orange-500'>
     {props.children}
   </div>
 )
