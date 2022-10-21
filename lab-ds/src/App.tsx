@@ -7,7 +7,6 @@ import maskPhone from "./utils/maskPhone.js"
 import { Button } from "./components/Button";
 import { Heading } from "./components/Heading";
 import { Text } from "./components/Text";
-import Input from "./components/Input";
 
 import { Envelope, Lock } from "phosphor-react";
 import { User } from "phosphor-react";
@@ -63,6 +62,7 @@ export const App = () => {
           </div>
 
           <input 
+          autoComplete="off"
             placeholder="Your name"
             type="text"
             className="h-10 flex items-center gap-3 py-4 px-9 rounded w-full outline-none bg-gray-800 focus-within:ring-1 ring-orange-500 text-gray-400 text-xs"
@@ -84,6 +84,8 @@ export const App = () => {
           </div>
 
           <input 
+                    autoComplete="off"
+
             placeholder="Your E-mail adress"
             type="email"
             className="h-10 flex items-center gap-3 py-4 px-9 rounded w-full outline-none bg-gray-800 focus-within:ring-1 ring-orange-500 text-gray-400 text-xs"
@@ -108,6 +110,8 @@ export const App = () => {
           </div>
 
           <input 
+                    autoComplete="off"
+
             placeholder="Your password"
             type="password"
             className="h-10 flex items-center gap-3 py-4 px-9 rounded w-full outline-none bg-gray-800 focus-within:ring-1 ring-orange-500 text-gray-400 text-xs"
@@ -131,7 +135,9 @@ export const App = () => {
             )}
           </div>
 
-          <input 
+          <input
+                    autoComplete="off"
+
             placeholder="(88) 88888-8888"
             type="phone"
             className="h-10 flex items-center gap-3 py-4 px-9 rounded w-full outline-none bg-gray-800 focus-within:ring-1 ring-orange-500 text-gray-400 text-xs"
