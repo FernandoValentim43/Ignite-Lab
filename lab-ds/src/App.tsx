@@ -1,8 +1,7 @@
 import "./styles/global.css";
 import reactLogo from "./react-orange.svg";
 
-import maskPhone from "./utils/maskPhone.js"
-
+import yourModule from './utils/maskPhone.js';
 
 import { Button } from "./components/Button";
 import { Heading } from "./components/Heading";
@@ -10,7 +9,6 @@ import { Text } from "./components/Text";
 
 import { Envelope, Lock } from "phosphor-react";
 import { User } from "phosphor-react";
-import { LockSimple } from "phosphor-react";
 import { CheckboxComp } from "./components/Checkbox";
 import { Phone } from "phosphor-react";
 
@@ -142,11 +140,11 @@ export const App = () => {
             type="phone"
             className="h-10 flex items-center gap-3 py-4 px-9 rounded w-full outline-none bg-gray-800 focus-within:ring-1 ring-orange-500 text-gray-400 text-xs"
             {...register("phone", { required: true,  pattern: {
-              value: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/,
+              value: /(\d{0,2})(\d{0,5})(\d{0,4})/,
               message: '',
             },  })}
 
-            onChange={e => maskPhone(e)}
+            onChange={e => yourModule(e)}
 
           />
           <Phone className="text-orange-500 absolute text-lg mt-10 ml-2" />
@@ -175,3 +173,4 @@ export const App = () => {
     </section>
   );
 };
+
