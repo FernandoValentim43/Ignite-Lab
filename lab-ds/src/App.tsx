@@ -15,17 +15,21 @@ import { LockSimple } from "phosphor-react";
 import { CheckboxComp } from "./components/Checkbox";
 import { Phone } from "phosphor-react";
 
+
 import { useForm, SubmitHandler } from "react-hook-form";
-import { useEffect } from "react";
+
+type Inputs = {
+  example: string,
+  exampleRequired: string,
+};
 
 export const App = () => {
-  const { register, handleSubmit } = useForm();
-  const onSubmit = () => {
-    console.log("!");
-  };
 
+  const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>();
+  const onSubmit: SubmitHandler<Inputs> = data => console.log(data);
+  
   return (
-    <section className="w-screen h-screen flex-col bg-gray-900 flex items-center justify-center">
+    <section className="w-screen h-screen flex-col  bg-gray-400 flex items-center justify-center">
       <header className="flex flex-col items-center  mb-3">
         <img src={reactLogo} className="w-20 animate-spin-slow" />
         <Heading asChild={false} size={"md"}>
@@ -36,8 +40,7 @@ export const App = () => {
         </Text>
       </header>
 
-      <form
-        onSubmit={handleSubmit(onSubmit)}
+      <form  onSubmit={handleSubmit(onSubmit)}
         className="flex flex-col gap-1 items-stretch w-full max-w-sm"
       >
         <label htmlFor="name" className="flex flex-col gap-2">
@@ -45,12 +48,12 @@ export const App = () => {
             Enter your name
           </Heading>
 
-          <Input
-            
-            type={"text"}
-            placeholder={""}
-            {...register("firstName", { required: true, maxLength: 20 })}
-          />
+          <Input type={""} placeholder={""} {...register("exampleRequired", { required: true })} />
+       
+        
+           
+
+
         </label>
 
         <label htmlFor="agree" className="flex items-center gap-2 mt-2">
